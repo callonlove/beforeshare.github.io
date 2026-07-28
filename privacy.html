@@ -24,7 +24,7 @@
 
     <main class="legal-page">
       <section class="page-hero">
-        <p class="eyebrow">Last updated: July 27, 2026</p>
+        <p class="eyebrow">Last updated: July 28, 2026</p>
         <h1>Privacy Policy</h1>
         <p>BeforeShare is designed to clean private information before sharing without collecting your personal data.</p>
       </section>
@@ -32,18 +32,20 @@
       <section class="legal-card">
         <h2>Our Privacy Commitment</h2>
         <p><strong>BeforeShare does not collect, store, or transmit your personal data.</strong></p>
-        <p>OCR, face detection, text redaction, PDF flattening, prompt anonymization, and metadata stripping happen on your device. Your screenshots, photos, PDFs, and text are not uploaded by BeforeShare.</p>
+        <p>All processing — OCR, face detection, text redaction, PDF flattening, and metadata stripping — happens entirely on your device. Your screenshots, photos, PDFs, and text never leave your iPhone.</p>
       </section>
 
       <section class="legal-card">
-        <h2>Data We Do Not Collect</h2>
-        <ul>
-          <li>Name, email address, or phone number</li>
-          <li>Photos, screenshots, PDFs, or exported files</li>
-          <li>AI prompts, anonymized text, or placeholder mappings</li>
-          <li>GPS location or photo metadata</li>
-          <li>Usage analytics or behavioral data</li>
-          <li>Advertising identifiers or cross-app tracking data</li>
+        <h2>Data We Do NOT Collect</h2>
+        <ul style="list-style: none; padding-left: 0;">
+          <li>❌ We do not collect your name, email, or phone number</li>
+          <li>❌ We do not collect your photos, screenshots, or PDFs</li>
+          <li>❌ We do not collect your AI prompts or anonymized text</li>
+          <li>❌ We do not collect your location (GPS)</li>
+          <li>❌ We do not collect usage analytics or behavioral data</li>
+          <li>❌ We do not use third-party analytics SDKs</li>
+          <li>❌ We do not use advertising SDKs</li>
+          <li>❌ We do not track you across other apps or websites</li>
         </ul>
       </section>
 
@@ -60,23 +62,23 @@
             </thead>
             <tbody>
               <tr>
-                <td>Imported screenshots, photos, and PDFs</td>
-                <td>Device memory during processing</td>
-                <td>You close the workflow or export</td>
+                <td>Screenshots/photos/PDFs you import</td>
+                <td>Memory only (RAM)</td>
+                <td>When you close the screen or export</td>
               </tr>
               <tr>
-                <td>OCR and detection results</td>
-                <td>Device memory during review</td>
-                <td>You close the workflow</td>
+                <td>OCR results and detection data</td>
+                <td>Memory only</td>
+                <td>When you close the screen</td>
               </tr>
               <tr>
-                <td>AI Prompt placeholder mappings</td>
-                <td>Device memory during the session</td>
-                <td>The app goes to the background or session ends</td>
+                <td>AI Prompt mapping table</td>
+                <td>Memory only</td>
+                <td>When the app goes to background</td>
               </tr>
               <tr>
                 <td>Redacted export files</td>
-                <td>Only where you choose to save or share them</td>
+                <td>Only if you save to Photos</td>
                 <td>You control deletion</td>
               </tr>
             </tbody>
@@ -85,24 +87,69 @@
       </section>
 
       <section class="legal-card">
+        <h2>App Store Privacy Disclosure</h2>
+        <p>BeforeShare is classified as <strong>"Data Not Collected"</strong> on the App Store.</p>
+      </section>
+
+      <section class="legal-card">
+        <h2>On-Device Processing &amp; Third-Party AI Services</h2>
+        <p><strong>BeforeShare does not send any of your data to any third-party AI service.</strong></p>
+        <ul>
+          <li>All detection and anonymization — including the AI Prompt Cleaner, OCR, and personal-information detection — runs <strong>entirely on your device</strong>, using on-device rules and Apple's built-in frameworks.</li>
+          <li><strong>No text, photos, screenshots, PDFs, OCR output, detected personal information, or anonymized content is ever uploaded to, or sent to, any server or any AI service</strong> (including but not limited to ChatGPT, OpenAI, Claude, Anthropic, Gemini, or Google AI services). BeforeShare does not call, integrate, or communicate with any such service.</li>
+          <li>When you use the AI Prompt Cleaner, your text is analyzed on this device only. You then copy the cleaned text yourself and paste it into whichever app you choose. BeforeShare does not transmit anything on your behalf.</li>
+          <li>The app contains <strong>no third-party analytics, advertising, or tracking SDKs</strong>, and makes no network requests that carry your personal data.</li>
+        </ul>
+        <p style="margin-top: 16px;">Because nothing leaves your device, no permission is required and no data is shared with third parties.</p>
+      </section>
+
+      <section class="legal-card">
         <h2>Services We Use</h2>
-        <p>BeforeShare uses Apple StoreKit 2 for purchases and subscription status. Apple handles payment information and App Store account data. BeforeShare does not receive your full payment details.</p>
-        <p>The app does not include third-party analytics SDKs, advertising SDKs, or tracking SDKs.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Sent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>StoreKit 2</strong> (Apple)</td>
+                <td>Subscription management</td>
+                <td>Apple handles all transaction data; we only receive purchase status</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top: 16px;">StoreKit is Apple's first-party framework. We do not send any user content to this service.</p>
+      </section>
+
+      <section class="legal-card">
+        <h2>Subscriptions</h2>
+        <p>If you purchase a Pro subscription or Lifetime access:</p>
+        <ul>
+          <li>Payment is charged to your Apple ID via the App Store</li>
+          <li>Subscription management is handled entirely by Apple</li>
+          <li>We do not have access to your payment information</li>
+        </ul>
       </section>
 
       <section class="legal-card">
         <h2>Children's Privacy</h2>
-        <p>BeforeShare is rated 4+ and does not knowingly collect personal data from children.</p>
+        <p>BeforeShare is rated 4+ and does not knowingly collect any data from children.</p>
       </section>
 
       <section class="legal-card">
-        <h2>Changes To This Policy</h2>
-        <p>If our practices change, we will update this policy and post the new version on this page.</p>
+        <h2>Changes to This Policy</h2>
+        <p>We will update this Privacy Policy if our practices change. Any changes will be posted on this page.</p>
       </section>
 
       <section class="legal-card">
         <h2>Contact</h2>
-        <p>For privacy questions, contact <a href="mailto:support@beforeshare.app">support@beforeshare.app</a>.</p>
+        <p>If you have questions about this Privacy Policy, contact us at:<br>
+        <a href="mailto:support@beforeshare.app">support@beforeshare.app</a></p>
       </section>
     </main>
 
