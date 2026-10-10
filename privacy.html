@@ -24,25 +24,25 @@
 
     <main class="legal-page">
       <section class="page-hero">
-        <p class="eyebrow">Last updated: July 28, 2026</p>
+        <p class="eyebrow">Last updated: October 10, 2026</p>
         <h1>Privacy Policy</h1>
-        <p>BeforeShare is designed to clean private information before sharing without collecting your personal data.</p>
+        <p>BeforeShare processes your private content on your device. This policy explains local storage, optional model downloads, purchases, and support.</p>
       </section>
 
       <section class="legal-card">
         <h2>Our Privacy Commitment</h2>
-        <p><strong>BeforeShare does not collect, store, or transmit your personal data.</strong></p>
-        <p>All processing — OCR, face detection, text redaction, PDF flattening, and metadata stripping — happens entirely on your device. Your screenshots, photos, PDFs, and text never leave your iPhone.</p>
+        <p><strong>BeforeShare does not upload the private content you process. You may choose to save names and aliases in a local recognition library.</strong></p>
+        <p>All processing — OCR, face detection, text redaction, PDF flattening, and metadata stripping — happens entirely on your device. BeforeShare does not upload your screenshots, photos, PDFs, or text. Copies you choose to save, share, or paste into another app are managed by that destination.</p>
       </section>
 
       <section class="legal-card">
-        <h2>Data We Do NOT Collect</h2>
+        <h2>Content the App Does Not Upload</h2>
         <ul style="list-style: none; padding-left: 0;">
-          <li>❌ We do not collect your name, email, or phone number</li>
-          <li>❌ We do not collect your photos, screenshots, or PDFs</li>
-          <li>❌ We do not collect your AI prompts or anonymized text</li>
-          <li>❌ We do not collect your location (GPS)</li>
-          <li>❌ We do not collect usage analytics or behavioral data</li>
+          <li>❌ The app does not upload names, email addresses, or phone numbers found in your content</li>
+          <li>❌ The app does not upload your photos, screenshots, or PDFs</li>
+          <li>❌ The app does not upload your AI prompts or anonymized text</li>
+          <li>❌ The app does not upload location metadata from your files</li>
+          <li>❌ The app does not send usage analytics or behavioral data</li>
           <li>❌ We do not use third-party analytics SDKs</li>
           <li>❌ We do not use advertising SDKs</li>
           <li>❌ We do not track you across other apps or websites</li>
@@ -63,8 +63,13 @@
             <tbody>
               <tr>
                 <td>Screenshots/photos/PDFs you import</td>
-                <td>Memory only (RAM)</td>
-                <td>When you close the screen or export</td>
+                <td>Working images in memory; file sources may be temporarily retained in protected local task storage excluded from backups</td>
+                <td>When no longer needed by the active task. If removal fails, cleanup is retried when the app runs.</td>
+              </tr>
+              <tr>
+                <td>Content received by the share extension</td>
+                <td>Protected local task files excluded from backups, using random identifiers instead of original filenames</td>
+                <td>Pending items lose access 15 minutes after creation. Accepted text files are cleaned after their readers finish; accepted media follows the source lifetime. Cleanup is checked while the app runs.</td>
               </tr>
               <tr>
                 <td>OCR results and detection data</td>
@@ -72,35 +77,48 @@
                 <td>When you close the screen</td>
               </tr>
               <tr>
-                <td>AI Prompt mapping table</td>
-                <td>Memory only</td>
-                <td>When the app goes to background</td>
+                <td>Current AI text task, reply, and mapping table</td>
+                <td>Memory only, without a task archive</td>
+                <td>When you clear the task, after 15 continuous background minutes, or when the app terminates. Returning Home retains the task. Expiry is checked before foreground content is shown; erasure during system suspension is not promised.</td>
               </tr>
               <tr>
                 <td>Redacted export files</td>
-                <td>Only if you save to Photos</td>
-                <td>You control deletion</td>
+                <td>Temporary files for sharing or saving, plus copies in Photos or other destinations if you choose</td>
+                <td>You control saved copies. Destination apps and the system manage copies outside BeforeShare.</td>
+              </tr>
+              <tr>
+                <td>Names and aliases you save in the recognition library</td>
+                <td>A private local file requesting complete iOS file protection and marked for exclusion from backups</td>
+                <td>When you delete the rules</td>
+              </tr>
+              <tr>
+                <td>Optional Privacy Filter model files</td>
+                <td>Local model resources excluded from backups; these are public model files, not your private content</td>
+                <td>When you remove the model in Settings</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p>Older share items are migrated before new sources are admitted. If migration fails, the app offers retry or an explicit clear action. Existing new tasks are retained.</p>
+        <p>Recognition rules migrate from older preferences only after a protected save succeeds. Failed reading or saving retains existing stored rules for retry. Backup exclusions do not erase existing system backups or control copies outside the app.</p>
       </section>
 
       <section class="legal-card">
         <h2>App Store Privacy Disclosure</h2>
-        <p>BeforeShare is classified as <strong>"Data Not Collected"</strong> on the App Store.</p>
+        <p>On-device processing does not upload your private content. Optional model downloads send network and request information to the download service, as described below. Local content processing and download-service requests are separate practices. See <a href="https://developer.apple.com/app-store/app-privacy-details/">Apple's privacy definitions</a> for how App Store privacy details describe data handling.</p>
       </section>
 
       <section class="legal-card">
         <h2>On-Device Processing &amp; Third-Party AI Services</h2>
-        <p><strong>BeforeShare does not send any of your data to any third-party AI service.</strong></p>
+        <p><strong>BeforeShare does not send the private content you process to a third-party AI service.</strong></p>
         <ul>
-          <li>All detection and anonymization — including the AI Prompt Cleaner, OCR, and personal-information detection — runs <strong>entirely on your device</strong>, using on-device rules and Apple's built-in frameworks.</li>
-          <li><strong>No text, photos, screenshots, PDFs, OCR output, detected personal information, or anonymized content is ever uploaded to, or sent to, any server or any AI service</strong> (including but not limited to ChatGPT, OpenAI, Claude, Anthropic, Gemini, or Google AI services). BeforeShare does not call, integrate, or communicate with any such service.</li>
+          <li>All detection and anonymization — including the AI Prompt Cleaner, OCR, and personal-information detection — runs <strong>entirely on your device</strong>, using on-device rules and Apple's built-in frameworks. Optional additional detection uses the Privacy Filter model with ONNX Runtime on this device.</li>
+          <li><strong>No text, photos, screenshots, PDFs, OCR output, detected personal information, or anonymized content is ever uploaded to, or sent to, any server or any AI service</strong> (including but not limited to ChatGPT, OpenAI, Claude, Anthropic, Gemini, or Google AI services). BeforeShare does not call remote AI inference services for your content.</li>
           <li>When you use the AI Prompt Cleaner, your text is analyzed on this device only. You then copy the cleaned text yourself and paste it into whichever app you choose. BeforeShare does not transmit anything on your behalf.</li>
-          <li>The app contains <strong>no third-party analytics, advertising, or tracking SDKs</strong>, and makes no network requests that carry your personal data.</li>
+          <li>The app contains <strong>no third-party analytics, advertising, or tracking SDKs</strong>. Optional model downloads send network and request information to the download service; they do not include the content being processed.</li>
         </ul>
-        <p style="margin-top: 16px;">Because nothing leaves your device, no permission is required and no data is shared with third parties.</p>
+        <p style="margin-top: 16px;">Preparing Privacy Filter downloads fixed public model files over HTTPS from Hugging Face and its delivery infrastructure. These requests do not include your text, images, PDFs, OCR results, detected details, or recognition-library entries. After preparation, inference runs locally. You do not need a Hugging Face account to request these files.</p>
+        <p>The download service receives information such as your IP address and request details. <a href="https://huggingface.co/privacy">Hugging Face's privacy policy</a> describes its handling of service-use, IP, and device information. Local inference does not mean that no network metadata leaves your device. You can remove the downloaded model in the app's settings.</p>
       </section>
 
       <section class="legal-card">
@@ -118,7 +136,17 @@
               <tr>
                 <td><strong>StoreKit 2</strong> (Apple)</td>
                 <td>Subscription management</td>
-                <td>Apple handles all transaction data; we only receive purchase status</td>
+                <td>Apple handles transaction data; BeforeShare reads verified transactions to determine entitlement</td>
+              </tr>
+              <tr>
+                <td><strong>Hugging Face / delivery infrastructure</strong></td>
+                <td>Optional model-file preparation</td>
+                <td>Fixed public resource requests and associated network/request information; no content being processed</td>
+              </tr>
+              <tr>
+                <td><strong>Privacy Filter / ONNX Runtime</strong></td>
+                <td>Optional local additional detection</td>
+                <td>Model inference on this device; no remote inference request</td>
               </tr>
             </tbody>
           </table>
@@ -137,8 +165,13 @@
       </section>
 
       <section class="legal-card">
+        <h2>Contacting Support</h2>
+        <p>If you email support, we receive your email address, message, and any details you include so we can respond to your request. Your email provider and ours handle delivery. Do not send private documents, screenshots, credentials, or other sensitive content unless you have already redacted it.</p>
+      </section>
+
+      <section class="legal-card">
         <h2>Children's Privacy</h2>
-        <p>BeforeShare is rated 4+ and does not knowingly collect any data from children.</p>
+        <p>BeforeShare is rated 4+ and is not directed specifically at children. Optional model downloads use Hugging Face, whose <a href="https://huggingface.co/privacy">privacy policy</a> directs users under 13 not to use its services. The content rating does not replace the download provider's requirements.</p>
       </section>
 
       <section class="legal-card">
